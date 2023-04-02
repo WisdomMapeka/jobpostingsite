@@ -104,7 +104,6 @@ celerybeat.pid
 # Environments
 .env
 .venv
-jopsite-env
 jopsite-env/
 media
 media/
