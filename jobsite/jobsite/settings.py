@@ -24,14 +24,16 @@ config_file_path = os.path.join(PARENT_CONTAINER_DIR , "jobsite.json")
 with open(config_file_path) as config_file:
     config = json.load(config_file)
 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#es%r7zg1ky+n$zt-usj%xtl6rr*&#37aq16ca*j#k7twc5aj8'
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config['DEBUG']
 
 ALLOWED_HOSTS = []
 
