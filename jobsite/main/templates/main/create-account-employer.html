@@ -1,0 +1,85 @@
+{% load static %}
+{% include "./template-parts/header.html" %}
+<style>
+    .errorlist{
+        list-style-type: none;
+    }
+    .errorlist li{
+        text-align: center;
+        color: red;
+    }
+</style>
+
+
+
+        <!-- Contact Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Create Account Employer</h1>
+                <div class="row g-4">
+                    <div class="col-md-12">
+                        <div class="wow fadeInUp" data-wow-delay="0.5s">
+                            <form action="{% url 'create_account' 'employer' %}" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            {{ form.name.errors }}
+                                            {{form.name}}
+                                            <label for="id_name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            {{ form.username.errors }}
+                                            {{form.username}}
+                                            <label for="id_username">Your userName</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            {{ form.email.errors }}
+                                            {{form.email}}
+                                            <label for="id_email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            {{ form.phone_number.errors }}
+                                            {{form.phone_number}}
+                                            <label for="id_phone_number">Your phone Number</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            {{ form.password.errors }}
+                                            {{form.password}}
+                                            <label for="id_password">Your password</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            {{ form.repeat_password.errors }}
+                                            {{form.repeat_password}}
+                                            <label for="id_repeat_password">Repeat password</label>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox" name="is_employer" id="id_is_employer" checked>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100 py-3" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+       
+
+    {% include "./template-parts/footer.html" %}
