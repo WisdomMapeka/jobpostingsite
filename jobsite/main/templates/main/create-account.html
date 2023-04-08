@@ -17,7 +17,7 @@
             <div class="container">
                 <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Create Account</h1>
                 <div class="row g-4">
-                    <div class="col-md-12">
+                    <div class="col-md-8 mx-auto">
                         <div class="wow fadeInUp" data-wow-delay="0.5s">
                             <form action="{% url 'create_account' 'worker' %}" method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
@@ -51,17 +51,19 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <div class="form-floating">
+                                        <div class="form-group">
                                             {{ form.cv.errors }}
+                                            <label for="id_cv">Your Cv</label><br>
                                             {{form.cv}}
-                                            <label for="id_cv">Your Cv</label>
+                                            
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <div class="form-floating">
+                                        <div class="form-group">
                                             {{ form.cover_letter.errors }}
+                                            <label for="id_cover_letter">Your Cover letter</label><br>
                                             {{form.cover_letter}}
-                                            <label for="id_cover_letter">Your Cover letter</label>
+                                            
                                         </div>
                                     </div>
 
@@ -80,7 +82,7 @@
                                             <label for="id_repeat_password">Repeat password</label>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="is_employer"  id="id_is_employer">
+                                    <input type="text" hidden name="is_employer" value="0" id="id_is_employer">
                                     <div class="col-12">
                                         <button class="btn btn-dark w-100 py-3" type="submit">Send Message</button>
                                     </div>

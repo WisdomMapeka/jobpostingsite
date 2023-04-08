@@ -17,7 +17,7 @@
             <div class="container">
                 <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Create Account Employer</h1>
                 <div class="row g-4">
-                    <div class="col-md-12">
+                    <div class="col-md-8 mx-auto">
                         <div class="wow fadeInUp" data-wow-delay="0.5s">
                             <form action="{% url 'create_account' 'employer' %}" method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
@@ -66,7 +66,7 @@
                                             <label for="id_repeat_password">Repeat password</label>
                                         </div>
                                     </div>
-                                    <input type="checkbox" name="is_employer" id="id_is_employer" checked>
+                                    <input type="text" hidden name="is_employer" value="1" id="id_is_employer">
                                     <div class="col-12">
                                         <button class="btn btn-dark w-100 py-3" type="submit">Send Message</button>
                                     </div>

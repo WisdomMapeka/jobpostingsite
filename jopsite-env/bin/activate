@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/wiz/Desktop/practice projects/IMPORTANT PROJECTS/jobpostingsite/jopsite-env"
+VIRTUAL_ENV="/home/wiz/Desktop/practiceProjects/IMPORTANT PROJECTS/jobpostingsite/jopsite-env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

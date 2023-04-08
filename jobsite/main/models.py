@@ -29,12 +29,17 @@ class  Categories(models.Model):
 
 class Job_postings(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
+    category = models.ForeignKey(Categories, on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=500, blank=True, null=True)
     description = models.TextField(null=True, blank=True)
+    howtoapply = models.TextField(null=True, blank=True)
+    is_fulltime = models.BooleanField(default=True)
     location = models.CharField(max_length=200, null=True, blank=True)
     salary = models.CharField(max_length=200, blank=True, null=True)
     company = models.CharField(max_length=200, blank=True, null=True)
+    company_logo = models.ImageField(upload_to="companyLogos/", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    deadline =  models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):

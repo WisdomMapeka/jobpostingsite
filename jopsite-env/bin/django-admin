@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/wiz/Desktop/practice projects/IMPORTANT PROJECTS/jobpostingsite/jopsite-env/bin/python3" "$0" "$@"
+'''exec' "/home/wiz/Desktop/practiceProjects/IMPORTANT PROJECTS/jobpostingsite/jopsite-env/bin/python3.10" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

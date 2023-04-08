@@ -6,7 +6,7 @@ TAILWIND NOTES
 -npx tailwindcss -i ./src/input.css -o ../jobssite/jobs/static/jobs/css/styles.css --watch
 
 CREATING VIRTUAL ENV NORMAL WAY
-python3 -m venv jopsite-env
+python3.10 -m venv jopsite-env
 
 ACTIVATE VENV
 -run the command in the folder S24PROJECT on terminal
