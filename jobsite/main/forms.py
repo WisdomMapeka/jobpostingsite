@@ -86,3 +86,5 @@ class Job_postingsForm(ModelForm):
         }
 
 
+class SearchForm(forms.Form):
+     search_term = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': "form-control border-0", "placeholder":"search term"}))
