@@ -20,6 +20,7 @@ class Users(models.Model):
 class  Categories(models.Model):
     name = models.CharField(max_length=200, null=True, blank=True)
     icon = models.ImageField(upload_to="Categories/", blank=True, null=True)
+    icon_class = models.CharField(max_length=600, null=True, blank=True, help_text='get these at https://fontawesome.com/ version/5.10.0')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True, blank=True)
 
