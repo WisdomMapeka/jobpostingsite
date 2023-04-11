@@ -87,13 +87,13 @@
                 <div class="col-lg text-start text-dark display-7"> Hie Stranger</div> 
                 <div class="col-lg text-end">
                     {% if user.is_authenticated %}
-                    <a href="{% url 'job_posting' %}" class="btn btn-sm btn-primary px-4">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href="{% url 'job_posting' %}" class="btn btn-sm btn-primary px-2">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
                     {% else %}
-                    <a href="{% url 'signup_type' %}" class="btn btn-sm btn-primary px-4">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href="{% url 'signup_type' %}" class="btn btn-sm btn-primary px-2">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
                     {% endif %}
 
-                    <a href="{% url 'signup_type' %}" class="d-inline"><button class="btn btn-sm btn-primary px-4">login</button></a>
-                    <a href="{% url 'signup_type' %}" class="d-inline"><button class="btn btn-sm btn-primary px-4">signup</button></a>
+                    <a href="{% url 'signup_type' %}" class="d-inline"><button class="btn btn-sm btn-primary px-2">login</button></a>
+                    <a href="{% url 'signup_type' %}" class="d-inline"><button class="btn btn-sm btn-primary px-2">signup</button></a>
                 </div>  
             </div>
             {% endif %}
